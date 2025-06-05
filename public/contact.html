@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Vedant Jadhav</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d1224;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .contact-form {
+      background-color: #1b203e;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #16f2b3;
+      text-align: center;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #353a52;
+      border-radius: 5px;
+      background-color: #10172d;
+      color: white;
+    }
+    .contact-form button {
+      background: linear-gradient(to right, #ec4899, #8b5cf6);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+    .contact-form button:hover {
+      opacity: 0.9;
+    }
+    .success-message {
+      color: #16f2b3;
+      text-align: center;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="contact-form" id="contactForm">
+    <h2>Contact Me</h2>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required />
+
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+    <div id="successMessage" class="success-message">Message sent successfully!</div>
+  </form>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
+
+      try {
+        const res = await fetch("https://submit-form.com/5BxX74bPr", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (res.ok) {
+          successMessage.style.display = "block";
+          form.reset();
+        } else {
+          alert("Failed to send message.");
+        }
+      } catch (err) {
+        alert("An error occurred while sending the message.");
+      }
+    });
+  </script>
+</body>
+</html>
