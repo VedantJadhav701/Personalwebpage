@@ -3,7 +3,7 @@ export const projectsData = [
     id: 1,
     name: 'Crop and Fertilizer Recommendation System',
     description:
-      "I developed a Machine Learning-based web application that recommends the most suitable crop and fertilizer based on user-provided inputs like soil type, pH level, temperature, humidity, and rainfall. The model was trained using agricultural datasets and integrates classification and regression algorithms for accurate prediction. The app is deployed using Streamlit for the frontend and integrates a custom-built Flask API using Selenium to dynamically fetch market prices from Agmarknet. It also supports state-wise predictions and region-specific outputs.",
+      "A machine learning-based web application that recommends suitable crops and fertilizers based on inputs like soil type, pH, temperature, humidity, and rainfall. The backend uses classification and regression models trained on agricultural datasets. It integrates a Selenium-powered Flask API to scrape real-time market prices from Agmarknet, supports region-wise prediction, and provides a responsive UI via Streamlit.",
     tools: [
       'Python',
       'Pandas',
@@ -15,44 +15,46 @@ export const projectsData = [
       'Selenium',
       'BeautifulSoup',
       'Streamlit',
-      'Git',
       'Heroku / Streamlit Cloud',
       'Google Colab',
+      'Git',
       'HTML',
       'CSS'
     ],
     role: 'Machine Learning Engineer',
-    code: 'https://github.com/VedantJadhav701/crop-fertilizer-prediction',
-    demo: 'https://cropfertilizerprediction.streamlit.app/'
+    code: 'https://github.com/VedantJadhav701/AGRIPREDICTOR',
+    demo: 'https://agripredictor.streamlit.app/'
   },
   {
     id: 2,
-    name: 'Travel Agency App',
+    name: 'Movie Recommender System',
     description:
-      'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-    tools: ['NextJS', 'Tailwind CSS', 'Google Maps', 'NestJS', 'TypeScript', 'MySQL', 'AWS S3', 'Sun-Editor', 'Gmail Passkey'],
-    role: 'Full Stack Developer',
-    code: '',
-    demo: ''
+      'Built a content-based movie recommendation engine using NLP, CountVectorizer, and cosine similarity. It allows users to get recommendations by tags, genres, cast, or production company. Posters are fetched using TMDb API, and the frontend is built using Streamlit. Heavy files are managed with Git LFS or dynamically loaded from external sources.',
+    tools: ['Python', 'Pandas', 'Scikit-learn', 'Streamlit', 'TMDb API', 'Git LFS'],
+    role: 'Machine Learning Engineer / Frontend Developer',
+    code: 'https://github.com/VedantJadhav701/Movie-Recommender-System',
+    demo: 'https://fast-movie-recommender.streamlit.app/'
   },
   {
     id: 3,
-    name: 'AI Powered Real Estate',
+    name: 'Fake News Detection',
     description:
-      'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-    tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
-    role: 'Full Stack Developer',
-    code: '',
-    demo: ''
+      "A text classification app that detects whether a news article is fake or real using a Passive Aggressive Classifier and TF-IDF Vectorizer. The app is built with Streamlit and trained on Kaggle's fake and real news datasets. Includes preprocessing (stopwords removal, stemming) using NLTK.",
+    tools: ['Python', 'Scikit-learn', 'Pandas', 'NLTK', 'Streamlit', 'TF-IDF'],
+    role: 'Machine Learning Engineer',
+    code: 'https://github.com/VedantJadhav701/fake-news-detections-main',
+    demo: 'https://fakenewspredictor.streamlit.app/'
   },
-  {
-    id: 4,
-    name: 'Newsroom Management',
-    description:
-      "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-    tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', 'Calendar'],
-    code: '',
-    demo: '',
-    role: 'Front End Developer'
-  }
+  // Replace ID 4 in your portfolio with:
+  { 
+  id: 4,
+  name: 'Loan Eligibility Predictor',
+  description:
+    "A classification-based web app that predicts loan approval based on applicant details like income, education, credit history, and loan amount. Uses Logistic Regression and Random Forest models. UI built in Streamlit with real-time form input.",
+  tools: ['Python', 'Pandas', 'Scikit-learn', 'Streamlit', 'Matplotlib'],
+  role: 'Machine Learning Engineer',
+  code: 'https://github.com/VedantJadhav701/Loan-prediction',
+  demo: 'https://fastloanpredict.streamlit.app/'
+ }
+
 ];
